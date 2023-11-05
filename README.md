@@ -5,3 +5,4 @@ Taller 1: Desarrollar una Enciclopedia simple con HTML, Css y Javacript utilizan
 
 ## Api consumida: http://www.omdbapi.com/
 
+## URL del despliegue mediante GitHub: https://jdicao.github.io/T1_Enciclopedia/
