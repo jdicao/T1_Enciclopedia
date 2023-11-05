@@ -1,0 +1,156 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEC UTPL ENCICLOPEDIA</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="app">
+        <!-- Encabezado -->
+        <div class="app-header">
+          <h2 class="app-header-title">Búsqueda de películas</h2>
+          <form class="app-header-search">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Película a buscar..."
+              name="search"
+            />
+            <button type="submit" class="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <!-- Fin de Encabezado -->
+
+        <!-- Cuerpo -->
+
+        <div class="app-body">
+          <div class="app-body-content">
+            <!-- Imágen de la pelicula -->
+            <div class="app-body-content-thumbnail">
+              <img
+                src="https://m.media-amazon.com/images/M/MV5BMTIyMjIzMjA0N15BMl5BanBnXkFtZTcwNzQwNzMzMQ@@._V1_SX300.jpg"
+                alt="Imágen de super héroe"
+              />
+            </div>
+            <!-- Fin de Imágen de la pelicula -->
+
+
+            <div class="app-body-content-list">
+              <!-- Nombre de la pelicula -->
+              <div class="name">H6: DIARIO DE UN ASESINO</div>
+
+              <!-- Menu SINOPSIS-->
+              <div class="app-body-tabs-head">
+                <button
+                  type="button"
+                  class="tab-head-single active-tab"
+                  data-id="1"
+                >
+
+                <span class="app-body-tabs-head-titulo">Sinopsis</span>
+
+                <div class="tab-body-single-sinopsis">
+                    <span
+                      >Antonio Frau is a formerly convicted killer who, while
+                      having an active sex life with his buxom wife Francisca who
+                      also cheats on him with her older doctor, becomes a serial
+                      killer/rapist of women.</span
+                    >
+                  </div>                
+              </div>
+              <!-- Fin de SINOPSIS -->
+
+              <!-- Menu ACTORES-->
+              <div class="app-body-tabs-head">
+                <button
+                  type="button"
+                  class="tab-head-single active-tab"
+                  data-id="2"
+                >
+                <span class="app-body-tabs-head-titulo">Actores</span>
+
+                <div class="tab-body-single-actores">
+                    <span>Fernando Acaso, María José Bausá, Raquel Arenas</span>
+                  </div>                
+              </div>
+              <!-- Fin de ACTORES -->           
+
+              <!-- Menu DETALLE-->
+              <div class="app-body-tabs-head">
+                <button
+                  type="button"
+                  class="tab-head-single active-tab"
+                  data-id="3"
+                >
+                <span class="app-body-tabs-head-titulo">Detalle</span>
+
+                <div class="tab-body-single-detalle">
+                    <ul class="tab-body-single-detalleinfo">
+                        <li>
+                            <span>
+                                <i class="fas fa-film"></i>
+                                Año:
+                            </span>
+                            <span>2020</span>
+                        </li>
+                        <li>
+                            <span>
+                                <i class="fas fa-film"></i>
+                                Director:
+                            </span>
+                            <span>Martín Garrido Barón</span>
+                        </li>
+                        <li>
+                            <span>
+                                <i class="fas fa-film"></i>
+                                Genero:
+                            </span>
+                            <span>Crime, Horror, Thriller</span>
+                        </li>
+                        <li>
+                            <span>
+                                <i class="fas fa-film"></i>
+                                País:
+                            </span>
+                            <span>España</span>
+                        </li>
+                        <li>
+                            <span>
+                                <i class="fas fa-film"></i>
+                                Duración:
+                            </span>
+                            <span>92 min</span>
+                        </li>
+                        <li>
+                            <span>
+                                <i class="fas fa-film"></i>
+                                Idioma:
+                            </span>
+                            <span>Spanish</span>
+                        </li>
+                    </ul>
+
+                </div>                
+              </div>
+              <!-- Fin de DETALLE -->                 
+            </div>
+            <!-- Fin de la Información de la pelicula -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
