@@ -333,11 +333,13 @@ img {
         flex-direction: column;
     }
     .app-header-search{
+        border: 2px solid var(--grey-color);
         display: flex;
     }
     .app-header-search .form-control{
         min-width: auto;
-        color: #fff;
+        color: var(--dark-color);
+        
     }
     .app-header-search .search-btn{
         padding-left: 2rem;
