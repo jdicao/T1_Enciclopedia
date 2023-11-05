@@ -13,7 +13,7 @@ searchForm.addEventListener("submit", getInpuntValue);
 
 /* Consumir Api y si encuentra info llamar a metodo de presentacion de datos */
 const fetchAllFilm = async (searchText) => {
-    let url = `http://www.omdbapi.com/?t=${searchText}&apikey=760677d9`
+    let url = `https://www.omdbapi.com/?t=${searchText}&apikey=760677d9`
     try {
         
         const response = await fetch(url);
