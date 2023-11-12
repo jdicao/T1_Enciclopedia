@@ -1,27 +1,35 @@
-
-const searchForm = document.querySelector(".app-header-search");
-let searchList = document.getElementById("search-list");
-let allData;
+const searchBusqueda = document.querySelector(".busqueda");
+const searchSinopsis = document.querySelector(".ampliar-sinopsis");
+var textoBusqueda
+let dataPelicula
 
 const getInpuntValue = (event) => {
     event.preventDefault();
-    let searchText = searchForm.search.value;
-    fetchAllFilm(searchText);
+    textoBusqueda = searchBusqueda.txtPelicula.value;
+    console.log(textoBusqueda);
+    BuscarInfoPelicula(textoBusqueda);
 }
+
+const getSinopsisAmpliada = (event) => {
+    event.preventDefault();
+    console.log("Buscando sinopsis ampliada de: ", textoBusqueda);
+    BuscaSinopsisAmpliada(textoBusqueda);
+}
+
 /*caputar evento de click o enter en boton de busqueda*/
-searchForm.addEventListener("submit", getInpuntValue);
+searchBusqueda.addEventListener("submit", getInpuntValue);
+searchSinopsis.addEventListener("submit", getSinopsisAmpliada);
 
 /* Consumir Api y si encuentra info llamar a metodo de presentacion de datos */
-const fetchAllFilm = async (searchText) => {
-    let url = `https://www.omdbapi.com/?t=${searchText}&apikey=760677d9`
+const BuscarInfoPelicula = async (ltBusqueda) => {
+    let url = `https://www.omdbapi.com/?t=${ltBusqueda}&apikey=760677d9`
     try {
         
         const response = await fetch(url);
-        allData = await response.json();
+        dataPelicula = await response.json();
 
-        if (allData.Response === "True") {
-            console.log("Respuesta exitosa.");
-            showInfoFilmDetails(allData);
+        if (dataPelicula.Response === "True") {
+            CargaDetallePelicula(dataPelicula);
         } else {
             console.log("No se encontraron datos para la búsqueda proporcionada.");
             window.alert("No se encontraron datos para la búsqueda proporcionada.");
@@ -32,13 +40,37 @@ const fetchAllFilm = async (searchText) => {
     }
 }
 
+/*Presentar sinopsis ampliada*/
+const BuscaSinopsisAmpliada = async (ltBusqueda) => {
+    let url = `https://www.omdbapi.com/?t=${ltBusqueda}&plot=full&apikey=760677d9`
+    try {
+        
+        const response = await fetch(url);
+        dataPelicula = await response.json();
+
+        if (dataPelicula.Response === "True") {
+            document.querySelector(".texto-sinopsis").textContent = dataPelicula.Plot;
+        } 
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 /* Presentar los datos obtenidos de la Api */
-const showInfoFilmDetails = (data) => {
-    document.querySelector(".app-body-content-thumbnail").innerHTML = `<img src="${data.Poster}" alt="${data.Title}"/>`;
-    document.querySelector(".name").textContent = data.Title;
-    document.querySelector(".tab-body-single-sinopsis").innerHTML = `<span>${data.Plot}</span>`;
-    document.querySelector(".tab-body-single-actores").innerHTML = `<span>${data.Actors}</span>`;
-    document.querySelector(".tab-body-single-detalleinfo").innerHTML = `
+const CargaDetallePelicula = (data) => {
+    document.querySelector(".foto-pelicula").innerHTML = `<img src="${data.Poster}" alt="${data.Title}"/>`;
+    document.querySelector(".texto-titulo").textContent = data.Title;
+    document.querySelector(".texto-sinopsis").textContent = data.Plot;
+
+    document.querySelector(".lista-detalle").innerHTML = `
+    <li>
+        <span>
+        <i class="fas fa-film"></i>
+        Actores:
+        </span>
+        <span>${data.Actors}</span>
+    </li>    
     <li>
         <span>
         <i class="fas fa-film"></i>
@@ -83,3 +115,5 @@ const showInfoFilmDetails = (data) => {
     </li>
     `;
 }
+
+BuscarInfoPelicula("Marvel");

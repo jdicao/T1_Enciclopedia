@@ -2,8 +2,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEC UTPL ENCICLOPEDIA</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -12,145 +13,124 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body>
-    <div class="main-wrapper">
-      <div class="app">
-        <!-- Encabezado -->
-        <div class="app-header">
-          <h2 class="app-header-title">Búsqueda de películas</h2>
-          <form class="app-header-search">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Película a buscar..."
-              name="search"
-            />
-            <button type="submit" class="search-btn">
+    <div class="cabecera-busqueda">
+        <img src="Logo_Tec.png" alt="Logo Tec">
+        <h3 class="titulo-busqueda">Búsqueda de películas</h3>
+
+        <form class="busqueda">
+          
+          <input type="text" class="cuadro_busqueda" placeholder="Película a buscar..." name="txtPelicula">
+          <button type="submit" class="search-btn" name="btnBusqueda">
               <i class="fas fa-search"></i>
-            </button>
-          </form>
-        </div>
-        <!-- Fin de Encabezado -->
+          </button>
 
-        <!-- Cuerpo -->
+        </form>
 
-        <div class="app-body">
-          <div class="app-body-content">
-            <!-- Imágen de la pelicula -->
-            <div class="app-body-content-thumbnail">
-              <img
-                src="https://m.media-amazon.com/images/M/MV5BMTIyMjIzMjA0N15BMl5BanBnXkFtZTcwNzQwNzMzMQ@@._V1_SX300.jpg"
-                alt="Imágen de super héroe"
-              />
-            </div>
-            <!-- Fin de Imágen de la pelicula -->
-
-
-            <div class="app-body-content-list">
-              <!-- Nombre de la pelicula -->
-              <div class="name">H6: DIARIO DE UN ASESINO</div>
-
-              <!-- Menu SINOPSIS-->
-              <div class="app-body-tabs-head">
-                <button
-                  type="button"
-                  class="tab-head-single active-tab"
-                  data-id="1"
-                >
-
-                <span class="app-body-tabs-head-titulo">Sinopsis</span>
-
-                <div class="tab-body-single-sinopsis">
-                    <span
-                      >Antonio Frau is a formerly convicted killer who, while
-                      having an active sex life with his buxom wife Francisca who
-                      also cheats on him with her older doctor, becomes a serial
-                      killer/rapist of women.</span
-                    >
-                  </div>                
-              </div>
-              <!-- Fin de SINOPSIS -->
-
-              <!-- Menu ACTORES-->
-              <div class="app-body-tabs-head">
-                <button
-                  type="button"
-                  class="tab-head-single active-tab"
-                  data-id="2"
-                >
-                <span class="app-body-tabs-head-titulo">Actores</span>
-
-                <div class="tab-body-single-actores">
-                    <span>Fernando Acaso, María José Bausá, Raquel Arenas</span>
-                  </div>                
-              </div>
-              <!-- Fin de ACTORES -->           
-
-              <!-- Menu DETALLE-->
-              <div class="app-body-tabs-head">
-                <button
-                  type="button"
-                  class="tab-head-single active-tab"
-                  data-id="3"
-                >
-                <span class="app-body-tabs-head-titulo">Detalle</span>
-
-                <div class="tab-body-single-detalle">
-                    <ul class="tab-body-single-detalleinfo">
-                        <li>
-                            <span>
-                                <i class="fas fa-film"></i>
-                                Año:
-                            </span>
-                            <span>2020</span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fas fa-film"></i>
-                                Director:
-                            </span>
-                            <span>Martín Garrido Barón</span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fas fa-film"></i>
-                                Genero:
-                            </span>
-                            <span>Crime, Horror, Thriller</span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fas fa-film"></i>
-                                País:
-                            </span>
-                            <span>España</span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fas fa-film"></i>
-                                Duración:
-                            </span>
-                            <span>92 min</span>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fas fa-film"></i>
-                                Idioma:
-                            </span>
-                            <span>Spanish</span>
-                        </li>
-                    </ul>
-
-                </div>                
-              </div>
-              <!-- Fin de DETALLE -->                 
-            </div>
-            <!-- Fin de la Información de la pelicula -->
-          </div>
-        </div>
-      </div>
     </div>
 
+    <div class="cuerpo-pagina">
+        <div class="titulo-pelicula">
+            <h3 class="texto-titulo">TITULO DE LA PELICULA ENCONTRADO</h3>
+        </div>
+
+        <div class="detalle-pelicula">
+          <div class="info-pelicula">
+            <h3 class="info-detalle">Detalles interesantes</h3>
+
+            <div class="">
+              <ul class="lista-detalle">
+                  <li>
+                      <span>
+                          <i class="fas fa-film"></i>
+                          Actores:
+                      </span>
+                      <span>Jhon First</span>
+                  </li>                
+                  <li>
+                      <span>
+                          <i class="fas fa-film"></i>
+                          Año:
+                      </span>
+                      <span>2020</span>
+                  </li>
+                  <li>
+                      <span>
+                          <i class="fas fa-film"></i>
+                          Director:
+                      </span>
+                      <span>Martín Garrido Barón</span>
+                  </li>
+                  <li>
+                      <span>
+                          <i class="fas fa-film"></i>
+                          Genero:
+                      </span>
+                      <span>Crime, Horror, Thriller</span>
+                  </li>
+                  <li>
+                      <span>
+                          <i class="fas fa-film"></i>
+                          País:
+                      </span>
+                      <span>España</span>
+                  </li>
+                  <li>
+                      <span>
+                          <i class="fas fa-film"></i>
+                          Duración:
+                      </span>
+                      <span>92 min</span>
+                  </li>
+                  <li>
+                      <span>
+                          <i class="fas fa-film"></i>
+                          Idioma:
+                      </span>
+                      <span>Spanish</span>
+                  </li>
+              </ul>
+
+            </div>  
+            <!-- fin de div para lista  -->
+          </div>
+          <!-- fin de info-pelicula  -->
+
+          <div class="imagen-pelicula">
+              <div class="foto-pelicula">
+                <picture>
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BMTIyMjIzMjA0N15BMl5BanBnXkFtZTcwNzQwNzMzMQ@@._V1_SX300.jpg"
+                    alt="Imágen de pelicula"
+                  />
+                </picture>
+              </div>
+              <!-- fin de div para imagen  -->
+              <div>
+                <br>
+                <h3 class="info-detalle">Sinopsis</h3>
+              </div>
+              <div>
+                <form class="ampliar-sinopsis">
+                  <h4 class="texto-sinopsis">
+                    JJJ Frau is a formerly convicted killer who, while
+                    having an active sex life with his buxom wife Francisca who
+                    also cheats on him with her older doctor, becomes a serial
+                    killer/rapist of women.
+                  </h4> 
+                  <button type="submit" class="mas-info-pelicula">
+                    <i class="">Ver más información</i>
+                  </button>
+                </form>
+              </div>
+          </div>
+          <!-- fin de imagen-pelicula  -->
+        </div>
+        <!-- fin de detalle-pelicula  -->
+    </div>
+    <!-- fin de cuerpo-pagina  -->
     <script src="app.js"></script>
   </body>
+
 </html>
